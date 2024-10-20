@@ -3,6 +3,7 @@ const createArray = Array.from('12345'); // ['1', '2', '3', '4', '5']
 const arr = [1, 2, 3, 4, 5];
 const isArray = Array.isArray(arr); // true
 const arrLength = arr.length; // 5
+const filledArrayWithValue = new Array(5).fill('yourValue'); // ['yourValue', 'yourValue', 'yourValue', 'yourValue', 'yourValue']
 
 // Adding and removing elements
 const addFirstElement = arr.unshift(0); // [0, 1, 2, 3, 4, 5]
@@ -14,6 +15,9 @@ const addLastElement = arr.push(6); // [1, 2, 3, 4, 6]
 const findIndex = arr.at(2); // 3 (element at index 2)
 const findElement = arr.indexOf(3); // 2 (index of element 3)
 const isElementExist = arr.includes(5); // true
+
+// Replace array
+const updatedArray = arr.with(1, 10); // [1, 10, 3, 4, 6]
 
 // Combining arrays
 const anotherArray = [6, 7, 8];
@@ -27,12 +31,18 @@ const filledArray = arr.fill(0, 1, 3); // [3, 0, 0, 4, 6]
 
 // Reversing an array
 const reversedArray = arr.reverse(); // [6, 4, 0, 0, 3]
+const reversedArray2 = arr.toReversed();
 
 // Slicing an array
 const slicedArray = arr.slice(1, 3); // [4, 0]
 
+// Splicing an array
+const splicedArray = arr.splice(1, 1, 10); // [1, 10, 3, 4, 6]
+const toSplicedArray = arr.toSpliced(1, 1, 20);
+
 // Sorting an array
 const sortedArray = arr.sort(); // [0, 0, 3, 4, 6]
+const sortedArray2 = arr.toSorted();
 
 // Iterating over arrays
 arr.forEach(element => console.log(element)); // Logs each element
@@ -57,8 +67,8 @@ const someAboveFour = arr.some(element => element > 4); // true
 
 // Flattening arrays
 const nestedArray = [1, [2, [3, [4, 5]]]];
-const flatArray = nestedArray.flat(2); // [1, 2, 3, [4, 5]]
-const flatMappedArray = arr.flatMap(element => [element, element * 2]); // [0, 0, 0, 0, 3, 6, 4, 8, 6, 12]
+const flatArray = nestedArray.flat(2); // [1, 2, 3, 4, 5]
+const flatMappedArray = arr.flatMap(element => [element, element * 2]); // [0, 0, 6, 8, 12]
 
 // Array iterators
 const arrayKeys = arr.keys(); // Array Iterator
