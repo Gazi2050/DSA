@@ -12,6 +12,8 @@ var bool = true
 // Constant declaration using `const` (Cannot be changed)
 const id = 9
 
+/*Types*/
+
 func main() {
 	// Local variable declaration using `:=` (Shorthand syntax, inferred type)
 	funcVar := "hello world"
