@@ -1,7 +1,3 @@
-Here’s your improved version with an added **Go types table**, making it more comprehensive and structured:  
-
----
-
 ### **Variables in Go**  
 
 #### **1. `var` (Variable Declaration)**
@@ -34,11 +30,11 @@ Here’s your improved version with an added **Go types table**, making it more 
 
 ### **Key Differences Between `var`, `const`, and `:=`**  
 
-| Keyword | Purpose                | Mutability | Type Inference | Scope | Example          |
-|---------|------------------------|------------|----------------|-------|------------------|
-| `var`   | Declare a variable      | Mutable    | Optional       | Global & Local | `var x int = 10` |
-| `const` | Declare a constant      | Immutable  | No             | Global & Local | `const pi = 3.14`|
-| `:=`    | Shorthand for variable  | Mutable    | Yes (inferred) | Local (Inside functions only) | `x := 10` |
+| Keyword | Purpose                | Mutability | Type Inference | Scope | Reassignable | Redeclarable | Example          |
+|---------|------------------------|------------|----------------|-------|--------------|--------------|------------------|
+| `var`   | Declare a variable      | Mutable    | Optional       | Global & Local | ✅ Yes | ❌ No (same scope) | `var x int = 10` |
+| `const` | Declare a constant      | Immutable  | No             | Global & Local | ❌ No | ❌ No | `const pi = 3.14`|
+| `:=`    | Shorthand for variable  | Mutable    | Yes (inferred) | Local (Inside functions only) | ✅ Yes | ❌ No (same scope) | `x := 10` |
 
 ---
 
@@ -83,3 +79,4 @@ Go provides different categories of types:
 | `func`     | Function type                      | `var f func(int) int` |
 
 ---
+
