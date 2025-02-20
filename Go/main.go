@@ -2,30 +2,33 @@ package main
 
 import "fmt"
 
-/*variable*/
-// Global variable declaration using `var` (Can be changed)
+/* Variable Declarations */
+// Global variables (Can be changed)
 var number = 100
 var singleCharacter = 'G'
 var name = "gazi"
 var bool1 = true
 
-// Constant declaration using `const` (Cannot be changed)
+// Constant (Cannot be changed)
 const id = 9
 
-/*Types*/
-//inferred type(dynamic type)
+/* Type Declarations */
+// Inferred type (dynamic typing)
 var str1 = "hello"
 var num = 100
 var isTrue = true
 
-//static type
+// Explicit (static typing)
 var str2 string = "world"
 var num1 int = 6
 var num2 int8 = 99
 var num3 float64 = 77.7
+var isNum bool = true
 
-var one, two, three int = 1, 2, 3 //many variabe in one variable keyword
-// group variable
+// Multiple variables in one statement
+var one, two, three int = 1, 2, 3
+
+// Grouped variable declaration
 var (
 	num4    int
 	str3    string
@@ -33,17 +36,20 @@ var (
 )
 
 func main() {
-	// Local variable declaration using `:=` (Shorthand syntax, inferred type)
-	// can not stay unused a variable in function
+	// Local variable declaration using shorthand `:=`
 	funcString := "hello world"
 	funcNumber := 99
 	funcBool := true
-	var ()
-	// Printing values (print in block line)
-	fmt.Println(funcString)
+
+	// Printing values
+	fmt.Println(funcString) // Print with a new line
 	fmt.Println(funcNumber)
-	//print in same line
+
+	// Print in the same line
 	fmt.Print(funcBool)
-	fmt.Printf(funcString) // only print sting
+	//Print in the same line in Printf()
+	fmt.Printf("%s", funcString)  // ✅ Correct (prints a string)
+	fmt.Printf("%2d", funcNumber) // ✅ Corrected (uses %d for integers)
+	fmt.Printf("%t", funcBool)    // ✅ Corrected (uses %t for boolean values)
 
 }
