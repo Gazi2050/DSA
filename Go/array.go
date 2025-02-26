@@ -1,19 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"slices"
+)
 
-//In Go, arrays cannot be constants. The const keyword in Go is used for compile-time constants, and arrays are not allowed to be constants because their size or elements can vary at runtime.Arrays hold values that can be modified, so Go does not allow arrays to be constants.
 var arr [5]int
 var arr2 = [5]int{1, 2, 3, 4, 5}
 var arr3 = [...]string{"a", "b", "c"}
+var arr4 = [...]bool{true}
 
 func main() {
 	a := [5]int{1, 2, 3, 4, 5}
 	b := [...]int{10, 20, 30}
+	a[4] = 99
 
-	fmt.Println(a)
+	fmt.Println(a[4])
 	fmt.Println(b)
 	fmt.Println(arr)
 	fmt.Println(arr2)
-	fmt.Println(arr3)
+	// Convert arr3 (array) to a slice=> arr3[:] before using slices.Index
+	index := slices.Index(arr3[:], "b")
+	fmt.Println(index)
+	fmt.Println(len(arr4))
 }
