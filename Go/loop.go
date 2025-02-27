@@ -6,21 +6,21 @@ import "fmt"
 
 func main() {
 	/*normal for loop*/
-	// for i := 1; i < 5; i++ {
-	// 	fmt.Println(i)
-	// }
+	for i := 1; i < 5; i++ {
+		fmt.Println(i)
+	}
 
 	/*Infinite loop*/
-	// for {
-	// 	fmt.Println("this is Infinite loop")
-	// }
+	for {
+		fmt.Println("this is Infinite loop")
+	}
 
 	/*for as a while Loop*/
-	// j := 1
-	// for j < 5 {
-	// 	fmt.Println(j)
-	// 	j++
-	// }
+	j := 1
+	for j < 5 {
+		fmt.Println(j)
+		j++
+	}
 
 	/*for as a do-while Loop*/
 	k := 1
