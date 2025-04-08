@@ -53,4 +53,7 @@ function charCount(str) {
 
     return charCount;
 }
-console.log(charCount('hello world'));
+
+function test() {
+    console.log("hello world");
+}
