@@ -19,4 +19,4 @@ function reverseArray(arr: number[]): number[] {
     return arr
 }
 
-reverseArray([1, 2, 3, 4, 5])
+// reverseArray([1, 2, 3, 4, 5])
