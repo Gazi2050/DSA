@@ -1,7 +1,3 @@
-This is a well-structured guide! Here are a few refinements to improve clarity and formatting:
-
----
-
 ### **Variables in Go**  
 
 #### **1. `var` (Variable Declaration)**
@@ -15,8 +11,6 @@ var number = 100       // Type inferred as int
 var name string = "Go" // Explicit type declaration
 ```
 
----
-
 #### **2. `const` (Constant Declaration)**
 - Used to declare **immutable** values.
 - The value must be known **at compile-time**.
@@ -25,8 +19,6 @@ var name string = "Go" // Explicit type declaration
 ```go
 const pi = 3.14159
 ```
-
----
 
 #### **3. `:=` (Short Variable Declaration)**
 - Used **only inside functions** for concise variable declaration.
@@ -37,8 +29,6 @@ const pi = 3.14159
 varId := 22 // Equivalent to: var varId int = 22
 ```
 
----
-
 ### **Key Differences Between `var`, `const`, and `:=`**  
 
 | Keyword  | Purpose                  | Mutability | Type Inference | Scope | Reassignable | Redeclarable | Example          |
@@ -46,8 +36,6 @@ varId := 22 // Equivalent to: var varId int = 22
 | `var`    | Declare a variable        | ✅ Yes     | ✅ Optional    | Global & Local | ✅ Yes | ❌ No (same scope) | `var x int = 10` |
 | `const`  | Declare a constant        | ❌ No      | ❌ No          | Global & Local | ❌ No | ❌ No | `const pi = 3.14` |
 | `:=`     | Shorthand for variable    | ✅ Yes     | ✅ Yes         | Local (Inside functions only) | ✅ Yes | ❌ No (same scope) | `x := 10` |
-
----
 
 ### **Go Data Types**  
 
@@ -67,8 +55,6 @@ varId := 22 // Equivalent to: var varId int = 22
 | `complex64` | Complex number (`float32` real & imaginary) | `var c complex64 = 3 + 4i`  |
 | `complex128` | Complex number (`float64` real & imaginary) | `var c complex128 = 5 + 12i` |
 
----
-
 #### **2. Composite Types**  
 | Type      | Description                           | Example                                |
 |-----------|--------------------------------------|----------------------------------------|
@@ -78,16 +64,12 @@ varId := 22 // Equivalent to: var varId int = 22
 | `struct`  | Custom data structure               | `type Person struct { name string; age int }` |
 | `pointer` | Stores memory address of a variable | `var p *int`                           |
 
----
-
 #### **3. Special Types**  
 | Type         | Description                         | Example                      |
 |-------------|-------------------------------------|------------------------------|
 | `interface{}` | Empty interface (any type)       | `var anyData interface{}`   |
 | `chan`       | Channel for goroutines            | `var ch chan int`           |
 | `func`       | Function type                     | `var f func(int) int`       |
-
----
 
 ### **Printing in Go: `Println`, `Print`, and `Printf`**  
 
